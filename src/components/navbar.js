@@ -1,16 +1,16 @@
 import { Outlet, Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import NavbarBootstrap from "react-bootstrap/Navbar";
 
-export function navbar() {
+export function Navbar() {
   return (
-    <>
-      <Navbar bg="dark" variant="dark">
+    <div>
+      <NavbarBootstrap bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to="/">
-            Navbar
-          </Navbar.Brand>
+          <NavbarBootstrap.Brand as={Link} to="/">
+            POKEDEX-APP
+          </NavbarBootstrap.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">
               Home
@@ -26,13 +26,11 @@ export function navbar() {
             </Nav.Link>
           </Nav>
         </Container>
-      </Navbar>
+      </NavbarBootstrap>
 
       <section>
         <Outlet></Outlet>
       </section>
-    </>
+    </div>
   );
 }
-
-export default navbar;
