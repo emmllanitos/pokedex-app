@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export function Props({ firstname, lastname, age, height }) {
   return (
     <div>
@@ -8,3 +10,19 @@ export function Props({ firstname, lastname, age, height }) {
     </div>
   );
 }
+
+export function Button({ text, name, approved }) {
+  return (
+    <button className={approved ? "bg-green" : "bg-red"}>
+      {text} - {name}
+    </button>
+  );
+}
+
+Button.propTypes = {
+  text: PropTypes.string.isRequired,
+};
+
+Button.defaultProps = {
+  name: "Usuario",
+};

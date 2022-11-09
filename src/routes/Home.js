@@ -1,4 +1,4 @@
-import { Props } from "./Props";
+import { Props, Button } from "./Props";
 
 export const Home = () => {
   return (
@@ -10,6 +10,8 @@ export const Home = () => {
         age={25}
         height={170}
       />
+      <Button text="Señor" name="Edwar" approved={true} />
+      <Button text="Señor" approved={false} />
     </div>
   );
 };
