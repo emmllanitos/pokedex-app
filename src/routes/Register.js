@@ -1,3 +1,3 @@
-export function Register() {
+export const Register = () => {
   return <div>register</div>;
-}
+};

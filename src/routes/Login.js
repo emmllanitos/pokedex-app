@@ -1,7 +1,7 @@
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 
-export function Login() {
+export const Login = () => {
   return (
     <div className="containerForms">
       login
@@ -17,4 +17,4 @@ export function Login() {
       </Form>
     </div>
   );
-}
+};

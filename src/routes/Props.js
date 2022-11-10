@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export function Props({ firstname, lastname, age, height }) {
+export const Props = ({ firstname, lastname, age, height }) => {
   return (
     <div>
       <p>Nombre: {firstname}</p>
@@ -9,15 +9,15 @@ export function Props({ firstname, lastname, age, height }) {
       <p>Altura: {height}</p>
     </div>
   );
-}
+};
 
-export function Button({ text, name, approved }) {
+export const Button = ({ text, name, approved }) => {
   return (
     <button className={approved ? "bg-green" : "bg-red"}>
       {text} - {name}
     </button>
   );
-}
+};
 
 Button.propTypes = {
   text: PropTypes.string.isRequired,
@@ -29,8 +29,9 @@ Button.defaultProps = {
 
 const handleClick = (e) => {
   console.log(e);
+  console.log("enviado");
 };
 
-export function Button2({ text }) {
+export const Button2 = ({ text }) => {
   return <button onClick={handleClick}>{text}</button>;
-}
+};
