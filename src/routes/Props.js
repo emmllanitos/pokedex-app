@@ -26,3 +26,11 @@ Button.propTypes = {
 Button.defaultProps = {
   name: "Usuario",
 };
+
+const handleClick = (e) => {
+  console.log(e);
+};
+
+export function Button2({ text }) {
+  return <button onClick={handleClick}>{text}</button>;
+}
