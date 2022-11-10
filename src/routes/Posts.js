@@ -1,3 +1,5 @@
+import { GiYinYang } from "react-icons/gi";
+
 const handleClick = () => {
   fetch("https://pokeapi.co/api/v2/pokemon/luxray")
     .then((response) => response.json())
@@ -8,7 +10,10 @@ const handleClick = () => {
 export const Posts = () => {
   return (
     <div>
-      <button onClick={handleClick}>Traer datos</button>
+      <button onClick={handleClick}>
+        <GiYinYang />
+        Traer datos
+      </button>
     </div>
   );
 };
