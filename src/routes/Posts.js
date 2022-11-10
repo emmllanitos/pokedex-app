@@ -17,3 +17,22 @@ export const Posts = () => {
     </div>
   );
 };
+
+export const MapPoke = () => {
+  const apiPoke = [
+    { id: 1, name: "Edwar" },
+    { id: 2, name: "Roque" },
+    { id: 3, name: "Monica" },
+  ];
+
+  const salida = apiPoke.map((poke, i) => {
+    return (
+      <div key={i}>
+        <h1>ID: {poke.id}</h1>
+        <h3>Nombre: {poke.name}</h3>
+      </div>
+    );
+  });
+
+  return <div>{salida}</div>;
+};
