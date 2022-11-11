@@ -1,4 +1,4 @@
-import { Posts, MapPoke } from "./Posts";
+import { Posts, MapPoke, UsoUseState } from "./Posts";
 
 export const About = () => {
   return (
@@ -6,6 +6,7 @@ export const About = () => {
       <div>about</div>
       <Posts />
       <MapPoke />
+      <UsoUseState />
     </>
   );
 };

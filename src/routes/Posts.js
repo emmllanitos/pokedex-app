@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { GiYinYang } from "react-icons/gi";
 
 const handleClick = () => {
@@ -35,4 +36,27 @@ export const MapPoke = () => {
   });
 
   return <div>{salida}</div>;
+};
+
+export const UsoUseState = () => {
+  const [contador, setContador] = useState(0);
+  return (
+    <>
+      <h1>Contador: {contador}</h1>
+      <button
+        onClick={() => {
+          setContador(contador + 1);
+        }}
+      >
+        Sumar
+      </button>
+      <button
+        onClick={() => {
+          setContador(contador - 1);
+        }}
+      >
+        Restar
+      </button>
+    </>
+  );
 };
