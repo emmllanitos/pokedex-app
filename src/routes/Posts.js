@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { GiYinYang } from "react-icons/gi";
 
 const handleClick = () => {
@@ -40,6 +40,11 @@ export const MapPoke = () => {
 
 export const UsoUseState = () => {
   const [contador, setContador] = useState(0);
+
+  useEffect(() => {
+    console.log("Cargue " + contador + " del useEffect");
+  }, [contador]);
+
   return (
     <>
       <h1>Contador: {contador}</h1>
